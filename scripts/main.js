@@ -2,4 +2,8 @@ console.log('Logging to the console.');
 
 import { getFish } from "./FishData.js"
 
-console.log(fishCollection);
+const allTheFish = getFish();
+
+for (const fish of allTheFish) {
+    console.log(fish)
+}
