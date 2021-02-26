@@ -1,21 +1,21 @@
- const fishCollection = [
-	{
-		saltWater: true,
-		harvestLocation: "Pacific Ocean",
-		diet: "algae",
-		name: "Malcolm",
-		species: "Blue Tang",
-		inches: 13,
-		image: "bluefish.jpg"
-	},
-	{
+const fishCollection = [
+    {
+        saltWater: true,
+        harvestLocation: "Pacific Ocean",
+        diet: "algae",
+        name: "Malcolm",
+        species: "Blue Tang",
+        inches: 13,
+        image: "bluefish.jpg"
+    },
+    {
 		saltWater: true,
 		harvestLocation: "Bali",
 		diet: "really small fish",
 		name: "Bob",
 		species: "Guppy",
 		inches: 3,
-		image: "pinkfish.jpg"
+		image: "bluefish.jpg"
 	},
 	{ saltWater: true, 
       harvestLocation: "Atlantic Ocean", 
@@ -23,7 +23,7 @@
       name: "BigBoss", 
       species: "Amber Jack", 
       inches: 60, 
-      image: "greyfish.jpg" 
+      image: "bluefish.jpg" 
     },
 	{
 		saltWater: true,
@@ -57,7 +57,7 @@
 		harvestLocation: "Amazon Basin",
 		diet: "brine shrimp",
 		name: "Myrti",
-		image: "pinkfish.jpg",
+		image: "bluefish.jpg",
 		inches: 12,
 		species: "angel fish"
 	},
@@ -95,10 +95,10 @@
 		name: "Whiskers",
 		species: "Ictalurus furcatus",
 		inches: 39,
-		image: "blueCatfish.jpg"
+		image: "bluefish.jpg"
 	},
 	{ saltWater: true, harvestLocation: "South Pacific", diet: "shrimp", inches: 64, species: "Tuna", name: "Bruno", image: "bluefish.jpg" },
-	{ saltWater: false, harvestLocation: "Petsmart", diet: "algae", name: "Dorothy", species: "goldfish", inches: 3, img: "bluefish.jpg" },
+	{ saltWater: false, harvestLocation: "Petsmart", diet: "algae", name: "Dorothy", species: "goldfish", inches: 3, image: "bluefish.jpg" },
 	{
 		saltWater: false,
 		harvestLocation: "Lake Tahoe",
@@ -124,7 +124,7 @@
 		name: "Pizza",
 		species: "Tuna",
 		inches: 40,
-		image: "tuna.jpg"
+		image: "bluefish.jpg"
 	},
 	{
 		saltWater: false,
@@ -133,7 +133,7 @@
 		name: "Finn",
 		species: "Bass",
 		inches: 20,
-		image: "bluefish.jpeg",
+		image: "bluefish.jpg",
 	},
 	{
 		saltWater: true,
@@ -167,7 +167,7 @@
 		harvestLocation: "Atlantic Sea",
 		name: "flipper",
 		inches: 12,
-		image: "orangefish.jpg",
+		image: "bluefish.jpg",
 		diet: "worms",
 		species: "garibaldi"
 	},
@@ -187,7 +187,7 @@
 		name: "Cthulhu",
 		species: "Old One",
 		inches: 999,
-		image: "pinkfish.jpg"
+		image: "bluefish.jpg"
 	},
 	{ saltWater: false, harvestLocation: "Amazon River", diet: "smaller fish", name: "Bitey", species: "Pirhana", inches: 7.5, image: "bluefish.jpg" },
 	{
@@ -214,7 +214,7 @@
       name: "bluefin tuna", 
       species: "Thunnus thynnus", 
       inches: 84, 
-      image: "bluefin.pg" 
+      image: "bluefish.jpg" 
     },
 	{
 		saltwater: true,
@@ -227,6 +227,8 @@
 	}
 ];
 
-export const getFish = () => {
-    return fishCollection
+export const sendList = () => {
+    const data = fishCollection
+    
+    return data
 };
