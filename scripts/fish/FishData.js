@@ -1,14 +1,14 @@
 const fishCollection = [
-    {
-        saltWater: true,
-        harvestLocation: "Pacific Ocean",
-        diet: "algae",
-        name: "Malcolm",
-        species: "Blue Tang",
-        inches: 13,
-        image: "bluefish.jpg"
-    },
-    {
+	{
+		saltWater: true,
+		harvestLocation: "Pacific Ocean",
+		diet: "algae",
+		name: "Malcolm",
+		species: "Blue Tang",
+		inches: 13,
+		image: "bluefish.jpg"
+	},
+	{
 		saltWater: true,
 		harvestLocation: "Bali",
 		diet: "really small fish",
@@ -17,14 +17,15 @@ const fishCollection = [
 		inches: 3,
 		image: "bluefish.jpg"
 	},
-	{ saltWater: true, 
-      harvestLocation: "Atlantic Ocean", 
-      diet: "squid", 
-      name: "BigBoss", 
-      species: "Amber Jack", 
-      inches: 60, 
-      image: "bluefish.jpg" 
-    },
+	{
+		saltWater: true,
+		harvestLocation: "Atlantic Ocean",
+		diet: "squid",
+		name: "BigBoss",
+		species: "Amber Jack",
+		inches: 60,
+		image: "bluefish.jpg"
+	},
 	{
 		saltWater: true,
 		harvestLocation: "Pacific Ocean",
@@ -208,14 +209,15 @@ const fishCollection = [
 		inches: 7,
 		image: "bluefish.jpg"
 	},
-	{ saltWater: true, 
-      harvestLocation: "Atlantic, Pacific, and southern sea", 
-      diet: "smaller fish", 
-      name: "bluefin tuna", 
-      species: "Thunnus thynnus", 
-      inches: 84, 
-      image: "bluefish.jpg" 
-    },
+	{
+		saltWater: true,
+		harvestLocation: "Atlantic, Pacific, and southern sea",
+		diet: "smaller fish",
+		name: "bluefin tuna",
+		species: "Thunnus thynnus",
+		inches: 84,
+		image: "bluefish.jpg"
+	},
 	{
 		saltwater: true,
 		harvestLocation: "Baltic Sea",
@@ -227,45 +229,45 @@ const fishCollection = [
 	}
 ];
 
-export const sendList = () => {
-    const data = fishCollection
-    
-    return data
+export const getFish = () => {
+	return fishCollection
 };
 
 export const getMostHolyFishList = () => {
-    // 3, 6, 9, 12, etc... fish
-    const holyFishArray = []
+	// 3, 6, 9, 12, etc... fish
+	const holyFishArray = []
 
-    for (const eachFish of fishCollection) {
-		if(eachFish.inches % 3 === 0){
-			holyFishArray.push(eachFish);
+	for (const fish of fishCollection) {
+		if (fish.inches % 3 === 0) {
+			holyFishArray.push(fish);
 		};
-    };
+	};
 
-    return holyFishArray
+	return holyFishArray
 }
 
 export const getSoldierFish = () => {
-    // 5, 10, 15, 20, 25, etc... fish
-	const soldiersArray 
-	
-	for (const eachFish of fishCollection){
-	if(eachFish.inches % 5 ===0 && 3 !== 0){
-		soldiersArray.push(eachFish);
+	// 5, 10, 15, 20, 25, etc... fish
+	const soldiersArray = []
+
+	for (const fish of fishCollection) {
+		if (fish.inches % 5 === 0 && fish.inches % 3 !== 3) {
+			soldiersArray.push(fish);
+		};
+		console.log("soldier fish", soldiersArray)
+		return soldiersArray
 	};
-    return soldiersArray
-};
 }
 
-export const getUnworthy = () => {
-    // Any fish not a multiple of 3 or 5
-	const unworthyArray
-	
-	for (const eachFish of fishCollection){
-	if(eachFish.inches % !(5 ===0 || 3 === 0)){
-		soldiersArray.push(eachFish);
+export const getUnworthyFish = () => {
+	// Any fish not a multiple of 3 or 5
+	const unworthyArray = []
+
+	for (const fish of fishCollection) {
+		if (fish.inches % 5 !== 0 && fish.inches % 3 !== 0) {
+			unworthyArray.push(fish);
+		};
+		console.log("unworthyfish", unworthyArray)
+		return unworthyArray
 	};
-   return unworthyArray
-};
 }

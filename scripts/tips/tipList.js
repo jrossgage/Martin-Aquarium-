@@ -1,18 +1,20 @@
-const martinTips = [
-    'Choose an Appropriately Sized Tank',
-    'Find a Place for Your Aquarium',
-   ' Know Your Fish',
-   ' Condition Your Water',
-   ' Cycle Your Tank',
-    'Perform Regular Water Changes',
-    "Don't Overstock Your Tank",
-    'Do Not Overfeed Your Fish',
-    "Use Caution With New Fish",
-    "Use Caution With Treatments and Chemicals",
-    "Don't Trust the Salesperson",
-    'Join Some Aquarium Groups'
-];
+//importing tip data from tip data
+import { getTips } from './TipData.js';
 
-export const getTipList = () => {
-    return martinTips
+//importing formating from tip list
+import { Tip } from './Tip.js'
+
+//looping over array to produce section of data to go in asideTips
+export const TipList = () => {
+
+    const tipSection = document.querySelector('.asideTips');
+    let tipHTML = "";
+    const tips = getTips();
+    for (const tip of tips) {
+        tipHTML += Tip(tip)
+    }
+    tipSection.innerHTML += tipHTML
+
 };
+
+TipList();
